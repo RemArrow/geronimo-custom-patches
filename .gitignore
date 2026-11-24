@@ -1,0 +1,4 @@
+build/
+
+# patch pictures: shipped built into the release, not in the repo
+Assets/

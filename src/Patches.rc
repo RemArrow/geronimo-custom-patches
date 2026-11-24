@@ -1,0 +1,33 @@
+// Patches.dll resources: build\gen\patches.rc (written by build.bat: NAMES, the patch names one per line,
+// and PATCH0.. their pictures, in slice order) and the version block.
+#include "version.h"
+#include "build\\gen\\patches.rc"
+
+1 VERSIONINFO
+FILEVERSION PATCHES_VERSION_NUM
+PRODUCTVERSION PATCHES_VERSION_NUM
+FILEFLAGSMASK 0x3F
+FILEFLAGS 0x0
+FILEOS 0x40004
+FILETYPE 0x2
+FILESUBTYPE 0x0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "RemArrow"
+            VALUE "FileDescription", "Custom Patches - GML plugin for Geronimo"
+            VALUE "FileVersion", PATCHES_VERSION
+            VALUE "InternalName", "Patches"
+            VALUE "OriginalFilename", "Patches.dll"
+            VALUE "ProductName", "Custom Patches"
+            VALUE "ProductVersion", PATCHES_VERSION
+            VALUE "Comments", "Adds patches to Geronimo's kit station. Not affiliated with or endorsed by Dark Matter Studios."
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
